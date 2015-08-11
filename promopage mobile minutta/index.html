@@ -162,7 +162,7 @@
   /*
    Crossbrowser build http request
    */
-  function buildXmlHttp(){
+  /*function buildXmlHttp(){
     var xmlhttp;
     try {
       xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
@@ -177,11 +177,11 @@
       xmlhttp = new XMLHttpRequest();
     }
     return xmlhttp;
-  }
+  }*/
   /*
    Send email
    */
-  function send() {
+/*  function send() {
     if ($('.email_send_end').text() == "I’m in") {
       alert ('You are already send us your email');
       return
@@ -191,8 +191,8 @@
       //alert(email);
       var xmlhttp = buildXmlHttp();
       if (xmlhttp) {
-        /*xmlhttp.open('POST', '', true);
-        xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=utf-8');*/
+        /!*xmlhttp.open('POST', '', true);
+        xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=utf-8');*!/
         xmlhttp.onreadystatechange = function() {
           if (xmlhttp.readyState == 4) {
             if(xmlhttp.status == 200) {
@@ -211,20 +211,9 @@
     } else {
       alert('Invalid email');
     }
-  }
+  }*/
 
 </script>
 
-
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-48633000-1']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
 
 </html>
