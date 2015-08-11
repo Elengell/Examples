@@ -1,0 +1,128 @@
+@font-face {
+  font-family: 'Roboto-Light';
+  src: local('?'), url('fonts/Roboto-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: local('?'), url('fonts/Roboto-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'RobotoCondensed-Bold';
+  src: local('?'), url('fonts/RobotoCondensed-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+b {
+  font-weight: bold;
+}
+
+.wrap{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	position: relative;
+}
+.section{
+	text-align:center;
+}
+
+#mainlogo {
+  text-align: center;
+  width: 100%;
+  background-color: white;
+  height: 140px;
+}
+#mainlogo img {
+  margin-top: 10px;
+  margin-left: -500px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.main_label {
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 40pt;
+  font-family: Roboto-Medium, sans-serif;
+  font-weight: bold;
+  color: rgb(100, 100, 100);
+}
+
+.backside {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.big_text {
+  text-align: left;
+  z-index: 9999;
+  color: white;
+  font-size: 40pt;
+  font-family: Roboto-Medium,sans-serif;
+
+}
+
+.small_text {
+  text-align: left;
+  z-index: 9999;
+  color: white;
+  font-size: 28pt;
+  font-family: Roboto-Light,sans-serif;
+  font-weight: bold;
+}
+
+
+.email_send_end {
+  background-color: #f24646;
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+  height: 44px;
+  padding: 0 5px;
+  line-height: 42px;
+  font-family: Roboto-Light, sans-serif;
+  font-weight: bold;
+  font-size: 14pt;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+}
+.email_send_end:hover {
+  background-color: rgb(262, 90, 90);
+}
+
+.sign_input {
+  margin-top: 10px;
+  text-indent: 5px;
+  height: 40px;
+  border: 1px solid rgb(100, 100, 100);
+  font-family: Roboto-Light, sans-serif;
+  font-size: 12pt;
+  display: inline-block;
+}
+
+.bottom {
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  background-color: red;
+  z-index: 99;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  font-family: Roboto-Light, sans-serif;
+  font-size: 16pt;
+  line-height:60px;
+}
+

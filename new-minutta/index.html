@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>New Minutta for you</title>
+  <meta name="author" content=""/>
+  <meta name="description" content=""/>
+  <meta name="keywords" content=""/>
+  <meta name="Resource-type" content="Document"/>
+
+
+  <link rel="stylesheet" type="text/css" href="jquery.fullPage.css"/>
+  <link rel="stylesheet" type="text/css" href="main.css"/>
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+  <script type="text/javascript" src="jquery.fullPage.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $.fn.fullpage({
+        slidesColor: ['#f2f2f2', '#f24646', '#7BAABE', '#00c0c4'],
+        anchors: ['1', '2', '3', '4']
+      });
+    });
+  </script>
+
+</head>
+<body>
+
+<div class="section active" id="section0" style="background: url(img/f1.png) no-repeat;  background-size: cover;">
+
+  <div id="mainlogo">
+    <img src="img/AppIcon60x60@2x.png">
+    <div class="main_label">minutta</div>
+  </div>
+
+
+
+
+
+  <div id="first_page_texsts" style="display: inline-block; vertical-align: top; margin-top: 5%">
+    <label class="big_text">Share Your Photos.<br> Tell Your Story.</label>
+
+<!--    <div class="clear"></div>
+    <label class="small_text">In beautiful brief media shows</label>
+
+    <div class="clear"></div>
+    <label class="small_text" style="font-size: 24pt">created in just a single screen tap</label>-->
+
+    <div class="clear" style="height: 40px"></div>
+    <label class="small_text" style="font-size: 23pt; font-weight: normal">Coming Spring 2014</label>
+
+    <div class="clear" style="height: 60px"></div>
+  </div>
+  <img id="mphone" src="img/phone.png" style="z-index: 999999; height:72%; display: inline-block; margin-top: -10%"/>
+
+
+
+  <a href="#2">
+    <div class="bottom" style="background-color: #f24646;">Scroll down to learn more</div>
+  </a>
+
+
+</div>
+
+
+<div class="section" id="section1">
+  <label class="big_text " style="margin-top: 40px">Find yourself out of words? Use pictures instead.</label>
+
+  <div class="clear"></div>
+  <label class="big_text " style="font-size: 36pt">The best way to  send personalized heartwarming greetings to the ones you care about:</label>
+
+  <div class="clear" style="height: 30px"></div>
+  <label class="small_text" style="color: #000000">Tell mom "<b>Don't worry</b>, I'm doing well."</label><br><br>
+  <label class="small_text" style="color: #000000">Share your newborn baby pictures with distant relatives</label><br><br>
+  <label class="small_text" style="color: #000000">Say "Thank you" after a party or a date</label><br><br>
+
+  <div class="clear" style="height: 50px"></div>
+
+
+  <a href="#3">
+    <div class="bottom" style="background-color: #3b3b3d;">Another photo sharing app? Are you serious?</div>
+  </a>
+
+</div>
+
+
+<div class="section" id="section2" style="background: url(img/f2.png) no-repeat; background-size: cover; background-position: bottom;">
+
+
+    <label class="big_text">The best photo sharing app in the Galaxy.</label>
+
+    <div class="clear"></div>
+    <br>
+
+    <label class="small_text">Try the Minutta iPhone app - </label><br><br>
+    <label class="small_text">it is private, engaging and easy as pie.</label><br><br>
+
+
+  <a href="#4">
+    <div class="bottom" style="background-color: rgb(0,192,196)">A little more to learn</div>
+  </a>
+
+</div>
+
+
+<div class="section" id="section3">
+
+  <div class="container_24">
+    <div class="clear" style="height: 40px"></div>
+    <label class="big_text grid_24">Don't be shy. Tell us what you think</label><br>
+
+    <div class="clear" style="height: 20px"></div>
+    <label class="small_text grid_24" style="font-size: 13pt; font-weight: normal; font-style: italic">
+      Yes, I was waiting for this all of my life.
+    </label><br>
+    <input id="email" class="sign_input" placeholder="Enter your e-mail" onfocus="this.placeholder = ''"
+           onblur="this.placeholder = 'Enter your e-mail'"/>
+
+    <div class="email_send_end" onclick="send();">Sign me up!</div>
+
+
+    <div class="clear"></div>
+    <img src="img/img2.png">
+
+
+  </div>
+  <a href="#1">
+    <div class="bottom" style="background-color: #212839">Back to beginning</div>
+  </a>
+
+</div>
+
+
+</body>
+
+<script>
+  function sizechange() {
+    var h = $(window).height();
+    var w = $(window).width();
+    if (h>w) {
+      $('#first_page_texsts').css({marginTop: '30%'});
+    } else {
+      $('#first_page_texsts').css({marginTop: '5%'});
+    }
+  }
+
+  $(window).resize(function() {
+    sizechange();
+  });
+
+  $(window).bind('orientationchange', sizechange());
+
+
+
+
+
+
+  /*
+   Crossbrowser build http request
+   */
+  function buildXmlHttp(){
+    var xmlhttp;
+    try {
+      xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+    } catch (e) {
+      try {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      } catch (e) {
+        xmlhttp = false;
+      }
+    }
+    if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+      xmlhttp = new XMLHttpRequest();
+    }
+    return xmlhttp;
+  }
+  /*
+   Send email
+   */
+  function send() {
+    if ($('.email_send_end').text() == "I’m in") {
+      alert ('You are already send us your email');
+      return
+    }
+    var email = document.getElementById("email").value;
+    if (/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/.test(email.toUpperCase())) {
+      //alert(email);
+      var xmlhttp = buildXmlHttp();
+      if (xmlhttp) {
+        /*xmlhttp.open('POST', '', true);
+        xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=utf-8');*/
+        xmlhttp.onreadystatechange = function() {
+          if (xmlhttp.readyState == 4) {
+            if(xmlhttp.status == 200) {
+              console.log('Success');
+              alert('Thank you! You are in!');
+              $('.email_send_end').text("I’m in");
+            } else {
+              console.log('Status: ' + xmlhttp.status);
+              alert('Something went wrong. Please try again.');
+            }
+          }
+        };
+        var data = JSON.stringify({email:email});
+//        xmlhttp.send('' + encodeURIComponent(data));
+      }
+    } else {
+      alert('Invalid email');
+    }
+  }
+
+</script>
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-48633000-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</html>
